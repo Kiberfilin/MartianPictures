@@ -1,0 +1,17 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "MartianPictures"
+include ':app'
+include ':sources:base:core'
+include ':sources:base:core_api'
+include ':sources:base:core_impl'
+include ':sources:commons:ui_core'
+include ':sources:commons:mvvm_core'
+include ':sources:features:main_screen'
+include ':sources:features:details_screen'

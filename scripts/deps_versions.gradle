@@ -1,0 +1,91 @@
+ext.sdkVersions = [
+        minSdk    : 23,
+        targetSdk : 30,
+        compileSdk: '30',
+        buildTools: '30.0.2'
+]
+
+ext {
+    kotlin_version = "1.5.30"
+    daggerVersion = '2.33'
+    glideVersion = '4.11.0'
+    recyclerviewVersion = '1.2.1'
+    cardviewVersion = '1.0.0'
+    materialVersion = '1.5.0-alpha02'
+    rxjavaVersion = '2.2.2'
+    rxandroidVersion = '2.1.0'
+    rxkotlinVersion = '2.2.0'
+    rxrelayVersion = '2.0.0'
+    vkSDKVersion = '3.2.2'
+    timberVersion = '4.7.1'
+    multidexVersion = '2.0.1'
+    tomtomMapsSdkVersion = '2.4369'
+    constraintlayoutVersion = '2.1.0'
+    insetterVersion = '0.5.0'
+    junitVersion = '4.13.2'
+    androidxJunitVersion = '1.1.3'
+    androidxEspressoCoreVersion = '3.4.0'
+    ktxcoreVersion = '1.6.0'
+    swiperefreshlayoutVersion = '1.1.0'
+    exoPlayerVersion = '2.12.0'
+    appcompatVersion = '1.3.1'
+    nav_version = '2.3.5'
+    legacysupportv4Version = '1.0.0'
+    lifecycleVersion = '2.3.1'
+    mockitoVersion = '3.11.2'
+
+    //android, jetpack
+    appcompat = "androidx.appcompat:appcompat:$appcompatVersion"
+    navigationFragment = "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    navigationUI = "androidx.navigation:navigation-ui-ktx:$nav_version"
+    navigationSafeArgsGradlePlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+    lifecycle = "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+    viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    legacysupportv4 = "androidx.legacy:legacy-support-v4:$legacysupportv4Version"
+
+    //--> Dagger 2
+    dagger = "com.google.dagger:dagger:$daggerVersion"
+    daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    //design
+    ktxcore = "androidx.core:core-ktx:$ktxcoreVersion"
+    recyclerview = "androidx.recyclerview:recyclerview:$recyclerviewVersion"
+    cardview = "androidx.cardview:cardview:$cardviewVersion"
+    material = "com.google.android.material:material:$materialVersion"
+    constraintlayout = "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion"
+    swiperefreshlayout = "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayoutVersion"
+    insetter_main_lib = "dev.chrisbanes.insetter:insetter:$insetterVersion"
+    glide = "com.github.bumptech.glide:glide:$glideVersion"
+    glideAnnotationProcessor = "com.github.bumptech.glide:compiler:$glideVersion"
+
+    //Rx Android/Java/Kotlin
+    rxandroid = "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+    rxjava = "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    rxkotlin = "io.reactivex.rxjava2:rxkotlin:$rxkotlinVersion"
+    rxrelay = "com.jakewharton.rxrelay2:rxrelay:$rxrelayVersion"
+
+    //VK sdk
+    vkSDKcore = "com.vk:android-sdk-core:$vkSDKVersion"
+    vkSDKapi = "com.vk:android-sdk-api:$vkSDKVersion"
+
+    //Logging
+    timber = "com.jakewharton.timber:timber:$timberVersion"
+
+    //maps
+    tomtomMapsSdk = "com.tomtom.online:sdk-maps:$tomtomMapsSdkVersion"
+
+    //multidex
+    multidex = "androidx.multidex:multidex:$multidexVersion"
+
+    //tests
+    junit = "junit:junit:$junitVersion"
+    androidxJunit = "androidx.test.ext:junit:$androidxJunitVersion"
+    androidxEspressoCore = "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    mockitoCore = "org.mockito:mockito-core:$mockitoVersion"
+
+    //Multimedia
+    exoPlayer = "com.google.android.exoplayer:exoplayer:$exoPlayerVersion"
+    exoPlayerHls = "com.google.android.exoplayer:exoplayer-hls:$exoPlayerVersion"
+    exoPlayerUi = "com.google.android.exoplayer:exoplayer-ui:$exoPlayerVersion"
+}

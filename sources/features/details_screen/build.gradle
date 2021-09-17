@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+apply from: "$project.rootDir/scripts/deps_versions.gradle"
+
+android {
+    compileSdkVersion "$sdkVersions.compileSdk".toInteger()
+    buildToolsVersion "$sdkVersions.buildTools".toString()
+
+    defaultConfig {
+        minSdkVersion "$sdkVersions.minSdk"
+        targetSdkVersion "$sdkVersions.targetSdk"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation appcompat
+    implementation legacysupportv4
+    implementation livedata
+    implementation viewmodel
+    implementation lifecycle
+    androidTestImplementation androidxJunit
+    androidTestImplementation androidxEspressoCore
+    testImplementation junit
+    implementation ktxcore
+    implementation constraintlayout
+    implementation recyclerview
+    implementation material
+    implementation dagger
+    kapt daggerCompiler
+    implementation timber
+    implementation rxjava
+    implementation rxkotlin
+    implementation rxandroid
+    implementation navigationFragment
+
+    api project(':sources:base:core_api')
+    implementation project(':sources:commons:ui_core')
+    implementation project(':sources:commons:mvvm_core')
+}

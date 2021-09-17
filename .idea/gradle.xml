@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/sources" />
+            <option value="$PROJECT_DIR$/sources/base" />
+            <option value="$PROJECT_DIR$/sources/base/core" />
+            <option value="$PROJECT_DIR$/sources/base/core_api" />
+            <option value="$PROJECT_DIR$/sources/base/core_impl" />
+            <option value="$PROJECT_DIR$/sources/commons" />
+            <option value="$PROJECT_DIR$/sources/commons/mvvm_core" />
+            <option value="$PROJECT_DIR$/sources/commons/ui_core" />
+            <option value="$PROJECT_DIR$/sources/features" />
+            <option value="$PROJECT_DIR$/sources/features/details_screen" />
+            <option value="$PROJECT_DIR$/sources/features/main_screen" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

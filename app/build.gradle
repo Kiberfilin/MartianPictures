@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs'
+}
+
+apply from: "$project.rootDir/scripts/deps_versions.gradle"
+
+android {
+    compileSdkVersion "$sdkVersions.compileSdk".toInteger()
+    buildToolsVersion "$sdkVersions.buildTools".toString()
+
+    defaultConfig {
+        applicationId "ru.cybereagleowl.festapp"
+        minSdkVersion "$sdkVersions.minSdk"
+        targetSdkVersion "$sdkVersions.targetSdk"
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation ktxcore
+    implementation appcompat
+    implementation material
+    implementation timber
+    implementation navigationFragment
+    implementation dagger
+    kapt daggerCompiler
+    implementation lifecycle
+    testImplementation junit
+    androidTestImplementation androidxJunit
+    androidTestImplementation androidxEspressoCore
+
+    //core
+    implementation project(':sources:base:core')
+    //commons
+    implementation project(':sources:commons:ui_core')
+    //features
+    implementation project(':sources:features:main_screen')
+    implementation project(':sources:features:details_screen')
+}
